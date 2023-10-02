@@ -54,6 +54,13 @@ We have a checklist at the bottom of this README file, which you should update a
 - [ ] I have even solved some edge cases (brownie points) 💪
 - [x] I added my very planned-out approach to the problem at the end of this README 📜
 
+
+## Got Questions❓
+Feel free to check the discussions tab, you might get something of help there. Check out that tab before reaching out to us. Also, did you know, the internet is a great place to explore 😛
+
+## Developer's Section
+*Add your video here, and your approach to the problem (optional). Leave some comments for us here if you want, we will be reading this :)*
+
 ## My Approach:
 
 I first considered a desktop solution, but after some Google search, I realized it would be better to have a web-based solution.
@@ -71,8 +78,3 @@ That's when, with some Stack Overflow help, I discovered batch copying - copying
 Because of this improvement, the processing time was reduced from 4 minutes to just 4 seconds.
 
 
-## Got Questions❓
-Feel free to check the discussions tab, you might get something of help there. Check out that tab before reaching out to us. Also, did you know, the internet is a great place to explore 😛
-
-## Developer's Section
-*Add your video here, and your approach to the problem (optional). Leave some comments for us here if you want, we will be reading this :)*
