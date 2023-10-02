@@ -77,4 +77,13 @@ That's when, with some Stack Overflow help, I discovered batch copying - copying
 
 Because of this improvement, the processing time was reduced from 4 minutes to just 4 seconds.
 
+# Video:
+
+(https://drive.google.com/file/d/1ObSaz1V6orQ0duekkF1yUjMPpe4BRcTy/view?usp=sharing)
+
+# Link:
+
+Webapp - (https://script.google.com/macros/s/AKfycbyo1lFXgzDEeXgAYnLevcxN2MmP9_5XvljOWsup-Wb0-Gp9_B4aTGhLEbhzjisYOlxc/exec)
+Sheet - (https://docs.google.com/spreadsheets/d/1nRw3CoBIsfNeSnMn5YzZ_Su1SLh6NRkAYKc9b05A8nw/edit?usp=sharing)
+
 
