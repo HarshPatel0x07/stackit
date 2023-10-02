@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <base target="_top">
+</head>
+<body>
+  <h1>CSV Importer Web App</h1>
+  <input type="file" id="csvFile" accept=".csv"><br><br>
+  <label for="columns">Select columns to import:</label><br>
+  <select id="columns" multiple></select><br><br>
+  <button onclick="importSelectedColumns()">Import Selected Columns</button>
+
+  <script>
+    document.getElementById('csvFile').addEventListener('change', handleFileSelect);
+
+    function handleFileSelect(evt) {
+      var file = evt.target.files[0];
+      if (file) {
+        var reader = new FileReader();
+        reader.onload = function(e) {
+          var contents = e.target.result;
+          displayColumnOptions(contents);
+        };
+        reader.readAsText(file);
+      }
+    }
+
+    function displayColumnOptions(contents) {
+      var lines = contents.split('\n');
+      var headers = lines[0].split(',');
+      var columnsDropdown = document.getElementById('columns');
+      columnsDropdown.innerHTML = '';
+
+      for (var i = 0; i < headers.length; i++) {
+        var option = document.createElement('option');
+        option.value = i;
+        option.text = headers[i];
+        columnsDropdown.add(option);
+      }
+    }
+
+    function importSelectedColumns() {
+      var selectedColumns = [];
+      var columnsDropdown = document.getElementById('columns');
+      for (var i = 0; i < columnsDropdown.options.length; i++) {
+        if (columnsDropdown.options[i].selected) {
+          selectedColumns.push(Number(columnsDropdown.options[i].value));
+        }
+      }
+
+      // Pass the contents of the CSV file to getData()
+      getData().then(function(data) {
+        google.script.run.importSelectedColumns(data, selectedColumns);
+      });
+    }
+
+    function getData() {
+      var fileInput = document.getElementById('csvFile');
+      var file = fileInput.files[0];
+      var reader = new FileReader();
+
+      return new Promise((resolve, reject) => {
+        reader.onload = function(e) {
+          var contents = e.target.result;
+          var lines = contents.split('\n');
+          var data = [];
+          for (var i = 0; i < lines.length; i++) {
+            var values = lines[i].split(',');
+            data.push(values);
+          }
+          resolve(data);
+        };
+
+        reader.readAsText(file);
+      });
+    }
+  </script>
+</body>
+</html>
