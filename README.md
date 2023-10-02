@@ -54,6 +54,23 @@ We have a checklist at the bottom of this README file, which you should update a
 - [ ] I have even solved some edge cases (brownie points) 💪
 - [x] I added my very planned-out approach to the problem at the end of this README 📜
 
+## My Approach:
+
+I first considered a desktop solution, but after some Google search, I realized it would be better to have a web-based solution.
+
+I came across something called Google Apps Script and spent some time learning about it.
+
+After that, I revisited some of my JavaScript skills to code in Apps Script.
+
+I also utilized Chat GPT to help me with coding out some logic.
+
+For the initial solution, it was too slow because it was copying one line at a time. Even for a 10k lines file, it was taking 3 to 4 minutes.
+
+That's when, with some Stack Overflow help, I discovered batch copying - copying 100 or 1000 lines at a time and appending it to the file.
+
+Because of this improvement, the processing time was reduced from 4 minutes to just 4 seconds.
+
+
 ## Got Questions❓
 Feel free to check the discussions tab, you might get something of help there. Check out that tab before reaching out to us. Also, did you know, the internet is a great place to explore 😛
 
